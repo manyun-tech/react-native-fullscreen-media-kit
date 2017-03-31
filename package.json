@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-fullscreen-media-kit@^0.8.8",
+        "scope": null,
+        "escapedName": "react-native-fullscreen-media-kit",
+        "name": "react-native-fullscreen-media-kit",
+        "rawSpec": "^0.8.8",
+        "spec": ">=0.8.8 <0.9.0",
+        "type": "range"
+      },
+      "/Users/wangshubing/Documents/rn-xiaobailejia"
+    ]
+  ],
+  "_cnpm_publish_time": 1488447454631,
+  "_from": "react-native-fullscreen-media-kit@>=0.8.8 <0.9.0",
+  "_id": "react-native-fullscreen-media-kit@0.8.8",
+  "_inCache": true,
+  "_location": "/react-native-fullscreen-media-kit",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-fullscreen-media-kit-0.8.8.tgz_1488447452669_0.20403380529023707"
+  },
+  "_npmUser": {
+    "name": "ciyo",
+    "email": "446836396@qq.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-fullscreen-media-kit@^0.8.8",
+    "scope": null,
+    "escapedName": "react-native-fullscreen-media-kit",
+    "name": "react-native-fullscreen-media-kit",
+    "rawSpec": "^0.8.8",
+    "spec": ">=0.8.8 <0.9.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-native-fullscreen-media-kit/download/react-native-fullscreen-media-kit-0.8.8.tgz",
+  "_shasum": "7672f4c8b3c6786163d442596b13eb78bce3ec31",
+  "_shrinkwrap": null,
+  "_spec": "react-native-fullscreen-media-kit@^0.8.8",
+  "_where": "/Users/wangshubing/Documents/rn-xiaobailejia",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ldn0x7dc/react-native-media-kit/issues"
+  },
+  "dependencies": {
+    "@ldn0x7dc/react-native-slider": "0.0.3"
+  },
+  "description": "Video and Audio component for react-native apps, supporting both iOS and Android.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7672f4c8b3c6786163d442596b13eb78bce3ec31",
+    "size": 34551,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/react-native-fullscreen-media-kit/download/react-native-fullscreen-media-kit-0.8.8.tgz"
+  },
+  "gitHead": "1d31c91ef0c27e50e5e3d9d85fe2ff60b4accde0",
+  "homepage": "https://github.com/ldn0x7dc/react-native-media-kit#readme",
+  "keywords": [
+    "video",
+    "audio",
+    "media",
+    "react-native"
+  ],
+  "license": "ISC",
+  "main": "library/index.js",
+  "maintainers": [
+    {
+      "name": "ciyo",
+      "email": "446836396@qq.com"
+    }
+  ],
+  "name": "react-native-fullscreen-media-kit",
+  "optionalDependencies": {},
+  "publish_time": 1488447454631,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinaczy/react-native-media-kit.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.8.8"
+}
