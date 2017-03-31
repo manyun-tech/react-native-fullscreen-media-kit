@@ -370,7 +370,7 @@ export default class MediaPlayerView extends React.Component {
     }
 
     showControlView() {
-        Animated.timing(new Animated.Value(0), {toValue: 1, duration: 200}).start(() => {
+        Animated.timing(this.state.controlsAnim, {toValue: 1, duration: 200}).start(() => {
             this.showControl = true;
         });
 
