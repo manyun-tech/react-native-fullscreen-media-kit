@@ -61,7 +61,25 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
+**MainActivity.java **
 
+```
+import com.greatdroid.reactnative.media.MediaKitPackage;
+...
+protected List<ReactPackage> getPackages() {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MainActivityInstance.setActivity(this);//增加这句
+
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MainActivityInstance.setActivity(null);//增加这句
+    } 
+}
+```
 
 ## Documentation
 
