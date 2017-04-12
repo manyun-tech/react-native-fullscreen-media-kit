@@ -143,7 +143,7 @@ export default class MediaPlayerView extends React.Component {
         let height = this.state.height;
         console.log("mediaplayerview render....", this.screenStatus, width, height);
         let posterView;
-        if (width && height && this.state.showPoster) {
+        if (width && height && this.state.showPoster && !this.state.playing) {
             posterView = (
                 <View style={{
                     flex: 1,
@@ -391,7 +391,7 @@ export default class MediaPlayerView extends React.Component {
         if (Platform.OS == "ios")
             this.props.screenUpdate && this.props.screenUpdate();
         else
-            this.timer = setTimeout(() => this.props.screenUpdate && this.props.screenUpdate(), 800);
+            this.timer = setTimeout(() => this.props.screenUpdate && this.props.screenUpdate(), 200);
     }
 
     play() {
@@ -425,7 +425,7 @@ export default class MediaPlayerView extends React.Component {
 
     seekTo(timeMs) {
         console.log("seek to .." + this.props.canSeekUnwatch);
-        if (!this.showControl && !this.state.isplaying)
+        if (!this.showControl && !this.state.playing)
             return;
         if (!this.props.canSeekUnwatch) {
             // let maxSeek = Math.max(this.state.current , this.seekBackCurrent) ;
@@ -507,7 +507,8 @@ export default class MediaPlayerView extends React.Component {
 
         if (this.props.controls) {
             this.setState({
-                playing: false
+                playing: false,
+                showPoster: false,
             });
         }
     }
@@ -518,7 +519,6 @@ export default class MediaPlayerView extends React.Component {
         this.showControl = true;
 
         this.props.onPlayerFinished && this.props.onPlayerFinished();
-
         if (this.props.controls) {
             this.setState({
                 playing: false,
