@@ -143,7 +143,7 @@ export default class MediaPlayerView extends React.Component {
         let height = this.state.height;
         console.log("mediaplayerview render....", this.screenStatus, width, height);
         let posterView;
-        if (width && height && this.state.showPoster && !this.state.playing) {
+        if (width && height && this.state.showPoster) {
             posterView = (
                 <View style={{
                     flex: 1,
@@ -468,7 +468,6 @@ export default class MediaPlayerView extends React.Component {
 
     _onPlayerBufferChange(e) {
         this.props.onPlayerBuffering && this.props.onPlayerBuffering(e);
-
         if (this.props.controls) {
             this.setState({
                 bufferRanges: e.nativeEvent.ranges
@@ -508,7 +507,6 @@ export default class MediaPlayerView extends React.Component {
         if (this.props.controls) {
             this.setState({
                 playing: false,
-                showPoster: false,
             });
         }
     }
@@ -517,8 +515,7 @@ export default class MediaPlayerView extends React.Component {
         this.timer && clearTimeout(this.timer);
         Animated.timing(this.state.controlsAnim, {toValue: 1, duration: 100}).start();
         this.showControl = true;
-
-        this.props.onPlayerFinished && this.props.onPlayerFinished();
+        // console.log("**********this.props.controls= " + this.props.controls);
         if (this.props.controls) {
             this.setState({
                 playing: false,
@@ -527,6 +524,8 @@ export default class MediaPlayerView extends React.Component {
                 showPoster: true
             });
         }
+        this.props.onPlayerFinished && this.props.onPlayerFinished();
+
     }
 
     _onPlayerProgress(event) {
