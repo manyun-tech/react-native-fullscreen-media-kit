@@ -70,7 +70,7 @@ export default class MediaPlayerView extends React.Component {
             playing: true,
             current: 0,
             total: 0,
-
+            vTitle: this.props.videoTitle,
             width: 0,
             height: 0,
             showPoster: false,
@@ -292,7 +292,7 @@ export default class MediaPlayerView extends React.Component {
                     <Text
                         style={{color: 'white'}}
                         numberOfLines={1}>
-                        {this.props.videoTitle}
+                        {this.state.vTitle}
                     </Text>
                 </Animated.View>
             );
@@ -412,6 +412,10 @@ export default class MediaPlayerView extends React.Component {
             UIManager.RCTMediaPlayerView.Commands.stop,
             null
         );
+    }
+
+    setVTitle(title) {
+        this.setState({vTitle: title});
     }
 
     forceSeekTo(timeMs) {
