@@ -1,5 +1,5 @@
 #import "RCTMediaPlayerView.h"
-@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
 
 @interface RCTMediaPlayerView ()
 
