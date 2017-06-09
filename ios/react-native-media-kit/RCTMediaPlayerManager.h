@@ -1,4 +1,4 @@
-#import <RCTViewManager.h>
+#import "RCTViewManager.h"
 
 @interface RCTMediaPlayerManager : RCTViewManager
 

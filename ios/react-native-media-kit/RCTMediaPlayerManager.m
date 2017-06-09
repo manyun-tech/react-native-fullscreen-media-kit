@@ -1,6 +1,6 @@
 #import "RCTMediaPlayerManager.h"
 #import "RCTMediaPlayerView.h"
-#import "RCTUIManager.h"
+#import <React/RCTUIManager.h>
 
 @implementation RCTMediaPlayerManager
 
